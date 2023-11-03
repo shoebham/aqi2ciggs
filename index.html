@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>aqi2ciggs</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🚬</text></svg>">
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -15,6 +17,7 @@
     <div class="main">
         <div id="location-nav">
             Current Location: <span id="location"></span>
+
         </div>
         <div class="aqi2ciggs">
             <div class="info-box">
@@ -64,6 +67,8 @@
                     href="https://www.airnow.gov/sites/default/files/custom-js/aqi-conc.js">here</a> which is also
                 mentioned in Jasmines site</p>
             <p>The location is according to the users IP. support for GPS will be added son</p>
+            <h5>Note: if location is not fetched, it's because of adblocker. ublock was blocking calls to ipinfo. Will
+                change the provider in future</h5>
         </div>
     </div>
     <footer class="footer">
