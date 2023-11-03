@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
 </head>
 
 <body>
@@ -14,44 +18,55 @@
     </div>
 
     <div class="aqi2ciggs">
-        <div class="card">
-            <div class="card-image">
-                <span id="aqi" contenteditable="true" oninput="handleAqiChange(this)" data-maxvalue="500">-</span>
-
+        <div class="info-box">
+            <div class="info-header">
+                <h2>Air Quality Index (AQI)</h2>
+            </div>
+            <div class="info-content">
+                <span class="aqi" contenteditable="true" oninput="handleAqiChange(this)" data-maxvalue="500">-</span>
             </div>
             <div id="aqi-warning" class="warning-message"></div>
-
-            <div class="card-content">
-                <div class="card-title"></div>
-                <div class="card-description"></div>
-                <button class="card-button">AQI</button>
-            </div>
-
+            <button class="card-button">AQI</button>
         </div>
 
-        <div id="equals">=</div>
 
-        <div class="card">
-            <div class="card-image">
-                🚬
+
+        <div class="info-box">
+            <div class="info-header">
+                <h2>Number of Cigarettes</h2>
             </div>
-            <div class="card-content">
-                <div class="card-title">
-                    <div id="ciggs">-</div>
-                </div>
-                <div class="card-description"></div>
-                <button class="card-button">Ciggs</button>
+            <div class="info-content">
+                <span id="ciggs">5</span>
+            </div>
+            <div class="info-description">
+                <p>Cigarettes smoked</p>
             </div>
         </div>
     </div>
+
     <!-- More Information section -->
     <div class="more-information">
         <h2>Additional Information</h2>
-        <p>This works by converting the AQI to PM 2.5 particle concentrations.<br>
-            One cigarette per day is roughly equivalent to a PM2.5 level of 22 μg/m3
+        <p>This formula shows a quadratic equation: \( \text{AQI} \times x^2 + bx + c = 0 \)</p>
 
-        </p>
-        <!-- Add more content as needed -->
+        <p>This works by converting the AQI to PM2.5 particle concentrations.</p>
+        <p>One cigarette per day is roughly equivalent to a PM2.5 level of 22 μg/m3</p>
+        <p>Calculation</p>
+
+        <!-- More Information section -->
+
+        <h2>Calculation</h2>
+        <p>1 cigg = 22 μg/m³</p>
+        <p>1 μg/m³ = \( \frac{1}{22} \) cigg</p>
+        <p>1 AQI = 0.2 μg/m³</p>
+        <p>Current AQI: <span class="aqi">-</span></p>
+        <p> PM 2.5 Concentration based on AQI: <span id="conc-aqi"></span>\( \text{ } \mu g/m³ \)</p>
+
+
+
+
+
+
     </div>
 </body>
 <script src="script.js"></script>
