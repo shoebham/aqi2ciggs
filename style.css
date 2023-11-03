@@ -182,3 +182,24 @@ body {
 .aqi-OutOfRange {
     color: gray;
 }
+
+#calculation-container{
+    overflow: hidden;
+    
+}
+
+
+#calculation{
+  border-bottom: 1px solid red;
+  margin-top: -100%;
+  transition: all 1s;
+}
+
+#calculation.expanded {
+
+   margin-top: 0;
+}
+
+#show-calculation-button{
+    border:none;
+}

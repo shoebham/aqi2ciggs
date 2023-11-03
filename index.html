@@ -37,15 +37,21 @@
                 <p>Cigarettes smoked</p>
             </div>
         </div>
-        <div class="calculation">
-            <h3>Calculation</h3>
-            <p>1 cigg = 22 μg/m³</p>
-            <p>1 μg/m³ = \( \frac{1}{22} \) cigg</p>
-            <p>1 AQI = 0.2 μg/m³</p>
-            <p>Current AQI: <span class="aqi">-</span></p>
-            <p>PM 2.5 Concentration based on AQI: <span id="conc-aqi"></span>\( \text{ } \mu g/m³ \)</p>
-            <p>Cigarettes smoked based on concentration: <span id="cigarettes-smoked"></span></p>
+        <div>
+            <button class="show-calculation-button" id="show-calculation-button">Show Calculation</button>
+            <div id="calculation-container">
+                <div id="calculation" class="collapsed calculation">
+                    <h3>Calculation</h3>
+                    <p>1 cigg = 22 μg/m³</p>
+                    <p>1 μg/m³ = \( \frac{1}{22} \) cigg</p>
+                    <p>1 AQI = 0.2 μg/m³</p>
+                    <p>Current AQI: <span class="aqi">-</span></p>
+                    <p>PM 2.5 Concentration based on AQI: <span id="conc-aqi"></span>\( \text{ } \mu g/m³ \)</p>
+                    <p>Cigarettes smoked based on concentration: <span id="cigarettes-smoked"></span></p>
+                </div>
+            </div>
         </div>
+
     </div>
     <div class="more-information">
         <h2>Additional Information</h2>
