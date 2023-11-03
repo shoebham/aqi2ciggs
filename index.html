@@ -12,56 +12,63 @@
 </head>
 
 <body>
-    <div id="location-nav">
-        Current Location: <span id="location"></span>
-    </div>
-    <div class="aqi2ciggs">
-        <div class="info-box">
-            <div class="info-header">
-                <h2>Air Quality Index (AQI)</h2>
-            </div>
-            <div class="info-content">
-                <span class="aqi" contenteditable="true" oninput="handleAqiChange(this)" data-maxvalue="500">-</span>
-            </div>
-            <div id="aqi-warning" class="warning-message"></div>
-            <button class="card-button">AQI</button>
+    <div class="main">
+        <div id="location-nav">
+            Current Location: <span id="location"></span>
         </div>
-        <div class="info-box">
-            <div class="info-header">
-                <h2>Number of Cigarettes</h2>
+        <div class="aqi2ciggs">
+            <div class="info-box">
+                <div class="info-header">
+                    <h2>Air Quality Index (AQI)</h2>
+                </div>
+                <div class="info-content">
+                    <span class="aqi" contenteditable="true" oninput="handleAqiChange(this)"
+                        data-maxvalue="500">-</span>
+                </div>
+                <div id="aqi-warning" class="warning-message"></div>
+                <button class="card-button">AQI</button>
             </div>
-            <div class="info-content">
-                <span id="ciggs">5</span>
-            </div>
-            <div class="info-description">
-                <p>Cigarettes smoked</p>
-            </div>
-        </div>
-        <div>
-            <button class="show-calculation-button" id="show-calculation-button">Show Calculation</button>
-            <div id="calculation-container">
-                <div id="calculation" class="collapsed calculation">
-                    <h3>Calculation</h3>
-                    <p>1 cigg = 22 μg/m³</p>
-                    <p>1 μg/m³ = \( \frac{1}{22} \) cigg</p>
-                    <p>1 AQI = 0.2 μg/m³</p>
-                    <p>Current AQI: <span class="aqi">-</span></p>
-                    <p>PM 2.5 Concentration based on AQI: <span id="conc-aqi"></span>\( \text{ } \mu g/m³ \)</p>
-                    <p>Cigarettes smoked based on concentration: <span id="cigarettes-smoked"></span></p>
+            <div class="info-box">
+                <div class="info-header">
+                    <h2>Number of Cigarettes</h2>
+                </div>
+                <div class="info-content">
+                    <span id="ciggs">5</span>
+                </div>
+                <div class="info-description">
+                    <p>Cigarettes smoked</p>
                 </div>
             </div>
-        </div>
+            <div>
+                <button class="show-calculation-button" id="show-calculation-button">Show Calculation</button>
+                <div id="calculation-container">
+                    <div id="calculation" class="collapsed calculation">
+                        <h3>Calculation</h3>
+                        <p>1 cigg = 22 μg/m³</p>
+                        <p>1 μg/m³ = \( \frac{1}{22} \) cigg</p>
+                        <p>1 AQI = 0.2 μg/m³</p>
+                        <p>Current AQI: <span class="aqi">-</span></p>
+                        <p>PM 2.5 Concentration based on AQI: <span id="conc-aqi"></span>\( \text{ } \mu g/m³ \)</p>
+                        <p>Cigarettes smoked based on concentration: <span id="cigarettes-smoked"></span></p>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-    <div class="more-information">
-        <h2>Additional Information</h2>
-        <p>This works by converting the AQI to PM2.5 particle concentrations.</p>
-        <p>One cigarette per day is roughly equivalent to a PM2.5 level of 22 μg/m³</p>
-        <p>Calculation</p>
+        </div>
+        <div class="more-information">
+            <h2>Additional Information</h2>
+            <p>This works by converting the AQI to PM2.5 particle concentrations.</p>
+            <p>See the calculation for more info</p>
+            <p>I created this after seeing <a href="https://jasminedevv.github.io/AQI2cigarettes/"> this</a> and
+                calculation that I am using was taken from <a
+                    href="https://www.airnow.gov/sites/default/files/custom-js/aqi-conc.js">here</a> which is also
+                mentioned in Jasmines site</p>
+            <p>The location is according to the users IP. support for GPS will be added son</p>
+        </div>
     </div>
     <footer class="footer">
         <div class="footer-links">
-            <a href="https://github.com/shoebham" target="_blank">GitHub</a>
+            <a href="https://github.com/shoebham" target="_blank">GitHub</a>|
             <a href="mailto:me@shubhwym.me">Email</a>
         </div>
         <div class="footer-statement">
