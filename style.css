@@ -1,0 +1,164 @@
+/* style.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#location-nav {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.aqi2ciggs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    width: 200px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+}
+
+.card-button {
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+.equal-sign {
+    font-size: 36px;
+    margin: 0 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
+/* style.css */
+
+/* ... (previous CSS rules) */
+
+/* Remove the blue outline on focus for contenteditable element */
+#aqi[contenteditable="true"]:focus {
+    outline: none;
+}
+/* Add some basic styling for the warning message */
+.warning-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+}
+
+/* Add styling for the "More Information" section */
+.more-information {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.more-information h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.more-information p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Style for the entire content section (optional) */
+.content-section {
+    padding: 20px;
+}
+
+
+/* Define styles for different AQI categories */
+.aqi-Good {
+    color: green;
+}
+
+.aqi-Moderate {
+    color: yellow;
+}
+
+.aqi-UnhealthyForSensitiveGroups {
+    color: orange;
+}
+
+.aqi-Unhealthy {
+    color: red;
+}
+
+.aqi-VeryUnhealthy {
+    color: purple;
+}
+
+.aqi-Hazardous {
+    color: maroon;
+}
+
+.aqi-OutOfRange {
+    color: gray;
+}

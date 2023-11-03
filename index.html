@@ -5,29 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div id="location-nav">
-        Currrent Location: <span id="location"></span>
+        Current Location: <span id="location"></span>
     </div>
 
     <div class="aqi2ciggs">
-        <div id="aqi">
-            -
+        <div class="card">
+            <div class="card-image">
+                <span id="aqi" contenteditable="true" oninput="handleAqiChange(this)" data-maxvalue="500">-</span>
+
+            </div>
+            <div id="aqi-warning" class="warning-message"></div>
+
+            <div class="card-content">
+                <div class="card-title"></div>
+                <div class="card-description"></div>
+                <button class="card-button">AQI</button>
+            </div>
+
         </div>
 
         <div id="equals">=</div>
-        <div id="ciggs">
-            -
+
+        <div class="card">
+            <div class="card-image">
+                🚬
+            </div>
+            <div class="card-content">
+                <div class="card-title">
+                    <div id="ciggs">-</div>
+                </div>
+                <div class="card-description"></div>
+                <button class="card-button">Ciggs</button>
+            </div>
         </div>
     </div>
-    <div id="extra">
+    <!-- More Information section -->
+    <div class="more-information">
+        <h2>Additional Information</h2>
+        <p>This works by converting the AQI to PM 2.5 particle concentrations.<br>
+            One cigarette per day is roughly equivalent to a PM2.5 level of 22 μg/m3
 
+        </p>
+        <!-- Add more content as needed -->
     </div>
-
-
 </body>
 <script src="script.js"></script>
 
