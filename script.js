@@ -55,17 +55,17 @@ function handleAqiChange(element) {
   updateAQIStyle(currentValue);
   populateFormula();
   // Ensure the input is not greater than the maximum allowed value
-  if (currentValue > maxAllowedValue) {
-    currentValue = maxAllowedValue;
-    element.textContent = currentValue;
-    showWarningMessage("Value must be 500 or lower");
-  } else if (currentValue < 0) {
-    currentValue = 0;
-    element.textContent = currentValue;
-    showWarningMessage("Value must be 0 or greater");
-  } else {
-    hideWarningMessage();
-  }
+  // if (currentValue > maxAllowedValue) {
+  //   currentValue = maxAllowedValue;
+  //   element.textContent = currentValue;
+  //   showWarningMessage("Value must be 500 or lower");
+  // } else if (currentValue < 0) {
+  //   currentValue = 0;
+  //   element.textContent = currentValue;
+  //   showWarningMessage("Value must be 0 or greater");
+  // } else {
+  //   hideWarningMessage();
+  // }
   aqi = currentValue;
   aqi2ciggs(currentValue);
 }
@@ -124,7 +124,8 @@ function ConcPM25(a) {
   } else if (a > 400 && a <= 500) {
     ConcCalc = InvLinear(500, 401, 500.4, 350.5, a);
   } else {
-    ConcCalc = "PM25message";
+    ConcCalc = InvLinear(1500, 501, 1500, 500.5, a);
+    // ConcCalc = "PM25message";
   }
   return ConcCalc;
 }
@@ -158,10 +159,8 @@ function getAQIStyle(AQIndex) {
     AQICategory = "VeryUnhealthy";
   } else if (AQI > 300 && AQI <= 400) {
     AQICategory = "Hazardous";
-  } else if (AQI > 400 && AQI <= 500) {
+  } else if (AQI > 400) {
     AQICategory = "Hazardous";
-  } else {
-    AQICategory = "OutOfRange";
   }
 
   return AQICategory;
