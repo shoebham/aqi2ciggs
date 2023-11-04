@@ -224,3 +224,38 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .aqi2ciggs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 100%; /* Expand the info-box to full width */
+    }
+
+    .info-header h2 {
+        font-size: 18px; /* Reduce header font size */
+    }
+
+    .info-content {
+        font-size: 24px; /* Reduce content font size */
+    }
+
+    .info-description {
+        font-size: 12px; /* Reduce description font size */
+    }
+
+    .calculation-section {
+        padding: 10px;
+    }
+
+    .calculation h3 {
+        font-size: 16px; /* Reduce calculation header font size */
+    }
+
+    .calculation p {
+        font-size: 14px; /* Reduce calculation text font size */
+    }
+}
